@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Talk Podcast by Kotar RJ Pawan</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gradient-hero {
+            background: linear-gradient(135deg, #1a0a0a 0%, #2d0a0a 30%, #4a0e0e 60%, #1f0a0a 100%);
+        }
+
+        .gradient-gold {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 50%, #f6d365 100%);
+        }
+
+        .gradient-card {
+            background: linear-gradient(145deg, #fff5f5 0%, #ffe8e8 100%);
+        }
+
+        .gradient-premium {
+            background: linear-gradient(135deg, #1a0a0a 0%, #3d1a1a 50%, #1a0a0a 100%);
+        }
+
+        .text-gold {
+            color: #d4a054;
+        }
+
+        .border-gold {
+            border-color: #d4a054;
+        }
+
+        .bg-gold {
+            background-color: #d4a054;
+        }
+
+        .bg-gold-light {
+            background-color: #fdf0e0;
+        }
+
+        .hover-gold:hover {
+            background-color: #c4903a;
+            transition: all 0.3s ease;
+        }
+
+        .shadow-gold {
+            box-shadow: 0 8px 32px rgba(212, 160, 84, 0.25);
+        }
+
+        .shadow-soft {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #d4a054 0%, #b8863a 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(212, 160, 84, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #d4a054;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #d4a054;
+            color: #1a0a0a;
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: #d4a054;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #d4a054;
+        }
+
+        .episode-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .episode-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+        }
+
+        .floating-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .pulse-gold {
+            animation: pulseGold 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseGold {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 160, 84, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(212, 160, 84, 0);
+            }
+        }
+
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scroll-fade:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .scroll-fade:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .scroll-fade:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .scroll-fade:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .scroll-fade:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+        .scroll-fade:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .benefit-item {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .benefit-item:hover {
+            border-left-color: #d4a054;
+            background: rgba(212, 160, 84, 0.05);
+            padding-left: 1.25rem;
+        }
+
+        .mobile-menu {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-origin: top;
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-4px) scale(1.1);
+            color: #d4a054;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4a054;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b8863a;
+        }
+
+        .platform-badge {
+            transition: all 0.3s ease;
+        }
+
+        .platform-badge:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(circle at 20% 50%, rgba(212, 160, 84, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(212, 160, 84, 0.03) 0%, transparent 50%);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-hidden {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HEADER / NAVIGATION -->
+    <!-- ============================================================ -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1a0a0a]/95 backdrop-blur-md border-b border-[#d4a054]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2 group">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a054] to-[#b8863a] flex items-center justify-center text-white font-bold text-lg shadow-gold">
+                        ❤️
+                    </div>
+                    <div>
+                        <span class="font-playfair text-lg md:text-xl font-bold text-white tracking-tight group-hover:text-[#d4a054] transition">
+                            LoveTalk
+                        </span>
+                        <span class="hidden sm:inline text-[#d4a054] font-light text-sm ml-1">Podcast</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+                    <a href="#" class="nav-link text-white/80 hover:text-[#d4a054] px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#" class="nav-link text-white/80 hover:text-[#d4a054] px-3 py-2 text-sm font-medium">Episodes</a>
+                    <a href="#" class="nav-link text-white/80 hover:text-[#d4a054] px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#" class="nav-link text-white/80 hover:text-[#d4a054] px-3 py-2 text-sm font-medium">Blog</a>
+                    <a href="#" class="nav-link text-white/80 hover:text-[#d4a054] px-3 py-2 text-sm font-medium">Community</a>
+                    <a href="#" class="nav-link text-white/80 hover:text-[#d4a054] px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#" class="btn-primary text-white px-5 py-2 rounded-full text-sm font-semibold ml-2 shadow-gold">
+                        <i class="fas fa-crown mr-1"></i> Premium
+                    </a>
+                </nav>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobileMenuBtn" class="lg:hidden text-white/80 hover:text-[#d4a054] text-2xl focus:outline-none transition">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden bg-[#1a0a0a] border-t border-[#d4a054]/20 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <div class="px-4 py-4 space-y-1">
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Home</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Episodes</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">About Host</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Blog</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Free PDF</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Community</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Advertise</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Contact</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Career</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Be Our Guest</a>
+                <a href="#" class="block text-white/80 hover:text-[#d4a054] px-3 py-2.5 text-sm font-medium border-b border-white/5">Testimonials</a>
+                <a href="#" class="block btn-primary text-white px-5 py-3 rounded-full text-sm font-semibold text-center mt-3 shadow-gold">
+                    <i class="fas fa-crown mr-2"></i> Join Premium
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- HERO BANNER -->
+    <!-- ============================================================ -->
+    <section class="gradient-hero min-h-screen flex items-center relative overflow-hidden pt-20">
+        <!-- Background decorative shapes -->
+        <div class="absolute top-20 right-10 w-64 h-64 rounded-full bg-[#d4a054]/5 blur-3xl floating-shape"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-[#d4a054]/5 blur-3xl floating-shape" style="animation-delay: 3s;"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-[#d4a054]/5"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Content -->
+                <div class="text-center md:text-left space-y-6 scroll-fade">
+                    <div class="inline-flex items-center gap-2 bg-[#d4a054]/10 border border-[#d4a054]/30 rounded-full px-4 py-1.5 text-[#d4a054] text-sm font-medium">
+                        <i class="fas fa-microphone text-xs"></i>
+                        Weekly • Every Friday 7:00 AM
+                    </div>
+
+                    <h1 class="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                        Love Talk
+                        <span class="text-[#d4a054] block">Podcast</span>
+                    </h1>
+
+                    <p class="text-xl text-white/60 font-light italic">"Dil ki baate Dil se"</p>
+
+                    <p class="text-white/70 max-w-lg mx-auto md:mx-0 text-sm md:text-base leading-relaxed">
+                        Hosted by <span class="text-[#d4a054] font-semibold">Kotar RJ Pawan</span> — Transforming
+                        relationships through psychology, community, and exclusive learning experiences.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                        <a href="#" class="btn-primary text-white px-8 py-3.5 rounded-full text-sm font-semibold shadow-gold inline-flex items-center gap-2">
+                            <i class="fas fa-play-circle"></i> Listen Now
+                        </a>
+                        <a href="#" class="btn-secondary text-[#d4a054] px-8 py-3.5 rounded-full text-sm font-semibold inline-flex items-center gap-2">
+                            <i class="fas fa-crown"></i> Join Premium
+                        </a>
+                    </div>
+
+                    <!-- Platform badges -->
+                    <div class="flex flex-wrap gap-2 justify-center md:justify-start pt-4">
+                        <span class="text-white/40 text-xs uppercase tracking-wider w-full mb-1">Available on</span>
+                        <span class="platform-badge bg-white/5 border border-white/10 rounded-full px-3 py-1 text-white/60 text-xs flex items-center gap-1">
+                            <i class="fab fa-apple"></i> Apple
+                        </span>
+                        <span class="platform-badge bg-white/5 border border-white/10 rounded-full px-3 py-1 text-white/60 text-xs flex items-center gap-1">
+                            <i class="fab fa-spotify"></i> Spotify
+                        </span>
+                        <span class="platform-badge bg-white/5 border border-white/10 rounded-full px-3 py-1 text-white/60 text-xs flex items-center gap-1">
+                            <i class="fab fa-amazon"></i> Amazon
+                        </span>
+                        <span class="platform-badge bg-white/5 border border-white/10 rounded-full px-3 py-1 text-white/60 text-xs flex items-center gap-1">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </span>
+                        <span class="platform-badge bg-white/5 border border-white/10 rounded-full px-3 py-1 text-white/60 text-xs">Gaana</span>
+                        <span class="platform-badge bg-white/5 border border-white/10 rounded-full px-3 py-1 text-white/60 text-xs">Jio Saavn</span>
+                        <span class="platform-badge bg-white/5 border border-white/10 rounded-full px-3 py-1 text-white/60 text-xs">+40 more</span>
+                    </div>
+                </div>
+
+                <!-- Right - Hero Image / Visual -->
+                <div class="relative flex justify-center md:justify-end scroll-fade" style="animation-delay: 0.3s;">
+                    <div class="relative w-full max-w-md">
+                        <!-- Decorative ring -->
+                        <div class="absolute -inset-4 rounded-full border-2 border-[#d4a054]/20 animate-pulse"></div>
+                        <div class="absolute -inset-8 rounded-full border border-[#d4a054]/10"></div>
+
+                        <div class="relative bg-gradient-to-br from-[#2d0a0a] to-[#1a0a0a] rounded-3xl p-6 border border-[#d4a054]/20 shadow-2xl">
+                            <div class="flex flex-col items-center text-center space-y-4">
+                                <!-- Host avatar placeholder -->
+                                <div class="w-32 h-32 rounded-full bg-gradient-to-br from-[#d4a054] to-[#b8863a] flex items-center justify-center text-5xl shadow-gold">
+                                    🎙️
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-playfair text-xl font-bold">Kotar RJ Pawan</h3>
+                                    <p class="text-[#d4a054] text-sm">Host & Relationship Coach</p>
+                                </div>
+                                <div class="flex items-center gap-4 text-white/40 text-xs">
+                                    <span><i class="fas fa-calendar-alt text-[#d4a054] mr-1"></i> Since 12 Oct 2021</span>
+                                    <span><i class="fas fa-headphones text-[#d4a054] mr-1"></i> 100+ Episodes</span>
+                                </div>
+                                <div class="w-full h-px bg-gradient-to-r from-transparent via-[#d4a054]/30 to-transparent"></div>
+                                <div class="flex items-center gap-3 text-white/60 text-xs">
+                                    <span class="flex items-center gap-1"><i class="fas fa-check-circle text-[#d4a054]"></i> 25 Premium Benefits</span>
+                                    <span class="flex items-center gap-1"><i class="fas fa-users text-[#d4a054]"></i> Community</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-[#d4a054] text-[#1a0a0a] px-4 py-2 rounded-full text-xs font-bold shadow-lg shadow-[#d4a054]/30 flex items-center gap-2 animate-bounce">
+                            <i class="fas fa-crown"></i> Premium
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/20 animate-bounce">
+            <i class="fas fa-chevron-down text-xl"></i>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- LATEST EPISODE -->
+    <!-- ============================================================ -->
+    <section class="py-20 bg-white/95 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-fade">
+                <span class="text-[#d4a054] text-sm font-semibold uppercase tracking-wider">Latest Release</span>
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#1a0a0a] mt-2">New Episode Every Friday</h2>
+                <p class="text-gray-500 mt-3 max-w-lg mx-auto">Tune in every Friday at 7:00 AM for fresh insights on love, relationships, and emotional wellness.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Episode card -->
+                <div class="gradient-card rounded-2xl p-6 md:p-8 border border-[#d4a054]/10 shadow-soft episode-card scroll-fade">
+                    <div class="flex items-start gap-4">
+                        <div class="w-20 h-20 rounded-xl bg-[#d4a054]/10 flex items-center justify-center text-3xl flex-shrink-0">
+                            🎧
+                        </div>
+                        <div>
+                            <span class="text-[#d4a054] text-xs font-semibold uppercase tracking-wider">Episode 127</span>
+                            <h3 class="font-playfair text-xl font-bold text-[#1a0a0a] mt-1">Building Trust in Modern Relationships</h3>
+                            <p class="text-gray-500 text-sm mt-1">With special guest Dr. Ananya Sharma</p>
+                            <div class="flex items-center gap-3 mt-3 text-xs text-gray-400">
+                                <span><i class="far fa-calendar-alt text-[#d4a054]"></i> 27 June 2026</span>
+                                <span><i class="far fa-clock text-[#d4a054]"></i> 48 min</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <span class="bg-[#d4a054]/10 text-[#d4a054] text-xs px-3 py-1 rounded-full">Relationships</span>
+                                <span class="bg-[#d4a054]/10 text-[#d4a054] text-xs px-3 py-1 rounded-full">Psychology</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 flex gap-3">
+                        <a href="#" class="btn-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-gold inline-flex items-center gap-2">
+                            <i class="fas fa-play"></i> Listen Now
+                        </a>
+                        <a href="#" class="border border-[#d4a054]/30 text-[#d4a054] px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#d4a054]/5 transition">
+                            <i class="far fa-bookmark"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Episode image / visual -->
+                <div class="relative scroll-fade" style="animation-delay: 0.2s;">
+                    <div class="bg-gradient-to-br from-[#1a0a0a] to-[#2d0a0a] rounded-2xl p-6 border border-[#d4a054]/20">
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <span class="bg-[#d4a054]/10 border border-[#d4a054]/20 rounded-full px-4 py-2 text-[#d4a054] text-xs font-medium flex items-center gap-2">
+                                <i class="fas fa-calendar-week"></i> Every Friday 7:00 AM
+                            </span>
+                            <span class="bg-[#d4a054]/10 border border-[#d4a054]/20 rounded-full px-4 py-2 text-[#d4a054] text-xs font-medium flex items-center gap-2">
+                                <i class="fas fa-globe"></i> 40+ Platforms
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-3 mt-4">
+                            <div class="bg-white/5 rounded-lg p-3 text-center text-white/60 text-xs hover:bg-white/10 transition">
+                                <i class="fab fa-apple text-lg block text-[#d4a054]"></i> Apple
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-3 text-center text-white/60 text-xs hover:bg-white/10 transition">
+                                <i class="fab fa-spotify text-lg block text-[#d4a054]"></i> Spotify
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-3 text-center text-white/60 text-xs hover:bg-white/10 transition">
+                                <i class="fab fa-amazon text-lg block text-[#d4a054]"></i> Amazon
+                            </div>
+                            <div class="bg-white/5 rounded-lg p-3 text-center text-white/60 text-xs hover:bg-white/10 transition">
+                                <i class="fab fa-youtube text-lg block text-[#d4a054]"></i> YouTube
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TOP EPISODES -->
+    <!-- ============================================================ -->
+    <section class="py-20 bg-[#faf6f2]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-fade">
+                <span class="text-[#d4a054] text-sm font-semibold uppercase tracking-wider">Most Popular</span>
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#1a0a0a] mt-2">Top Episodes</h2>
+                <p class="text-gray-500 mt-3 max-w-lg mx-auto">The episodes that listeners love the most — packed with insights and heart.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Episode 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-[#d4a054]/10 shadow-soft episode-card scroll-fade">
+                    <div class="flex items-center gap-3">
+                        <span class="text-[#d4a054] font-playfair text-2xl font-bold">#1</span>
+                        <div class="w-12 h-12 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-[#d4a054]">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-playfair text-lg font-bold text-[#1a0a0a] mt-2">The Art of Deep Listening</h4>
+                    <p class="text-gray-500 text-sm mt-1">How to truly hear your partner and build emotional intimacy.</p>
+                    <div class="flex items-center justify-between mt-4 text-xs text-gray-400">
+                        <span><i class="far fa-calendar-alt text-[#d4a054]"></i> 15 May 2026</span>
+                        <span><i class="far fa-heart text-[#d4a054]"></i> 2.4K likes</span>
+                    </div>
+                    <a href="#" class="mt-4 inline-block text-[#d4a054] text-sm font-semibold hover:underline">Listen Now →</a>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-[#d4a054]/10 shadow-soft episode-card scroll-fade" style="animation-delay: 0.15s;">
+                    <div class="flex items-center gap-3">
+                        <span class="text-[#d4a054] font-playfair text-2xl font-bold">#2</span>
+                        <div class="w-12 h-12 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-[#d4a054]">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-playfair text-lg font-bold text-[#1a0a0a] mt-2">Navigating Conflict with Grace</h4>
+                    <p class="text-gray-500 text-sm mt-1">Turn disagreements into opportunities for deeper connection.</p>
+                    <div class="flex items-center justify-between mt-4 text-xs text-gray-400">
+                        <span><i class="far fa-calendar-alt text-[#d4a054]"></i> 8 May 2026</span>
+                        <span><i class="far fa-heart text-[#d4a054]"></i> 1.8K likes</span>
+                    </div>
+                    <a href="#" class="mt-4 inline-block text-[#d4a054] text-sm font-semibold hover:underline">Listen Now →</a>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-[#d4a054]/10 shadow-soft episode-card scroll-fade" style="animation-delay: 0.3s;">
+                    <div class="flex items-center gap-3">
+                        <span class="text-[#d4a054] font-playfair text-2xl font-bold">#3</span>
+                        <div class="w-12 h-12 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-[#d4a054]">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h4 class="font-playfair text-lg font-bold text-[#1a0a0a] mt-2">Building Trust After Betrayal</h4>
+                    <p class="text-gray-500 text-sm mt-1">Healing and rebuilding trust in relationships after difficult times.</p>
+                    <div class="flex items-center justify-between mt-4 text-xs text-gray-400">
+                        <span><i class="far fa-calendar-alt text-[#d4a054]"></i> 1 May 2026</span>
+                        <span><i class="far fa-heart text-[#d4a054]"></i> 1.5K likes</span>
+                    </div>
+                    <a href="#" class="mt-4 inline-block text-[#d4a054] text-sm font-semibold hover:underline">Listen Now →</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 scroll-fade">
+                <a href="#" class="text-[#d4a054] font-semibold hover:underline inline-flex items-center gap-2">
+                    View All Episodes <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ABOUT THE HOST -->
+    <!-- ============================================================ -->
+    <section class="py-20 gradient-hero relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[#d4a054]/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#d4a054]/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-fade">
+                    <span class="text-[#d4a054] text-sm font-semibold uppercase tracking-wider">Meet Your Host</span>
+                    <h2 class="font-playfair text-3xl md:text-4xl font-bold text-white mt-2">Kotar RJ Pawan</h2>
+                    <p class="text-[#d4a054] text-lg font-light mt-1">"Dil ki baate Dil se"</p>
+                    <div class="w-20 h-1 bg-[#d4a054] rounded-full mt-4"></div>
+
+                    <div class="space-y-4 mt-6 text-white/70 text-sm leading-relaxed">
+                        <p>
+                            <span class="text-[#d4a054] font-semibold">Kotar RJ Pawan</span> is a passionate relationship
+                            coach, podcaster, and the founder of TrueLove18Club. With a deep understanding of psychology
+                            and human connection, he has been helping individuals and couples build healthier, more
+                            fulfilling relationships since 2021.
+                        </p>
+                        <p>
+                            Through the <span class="text-[#d4a054] font-semibold">Love Talk Podcast</span>, he brings
+                            expert insights, real-life stories, and practical advice to millions of listeners across
+                            40+ platforms worldwide.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-center">
+                            <span class="block text-[#d4a054] font-playfair text-2xl font-bold">100+</span>
+                            <span class="text-white/40 text-xs">Episodes</span>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-center">
+                            <span class="block text-[#d4a054] font-playfair text-2xl font-bold">40+</span>
+                            <span class="text-white/40 text-xs">Platforms</span>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-center">
+                            <span class="block text-[#d4a054] font-playfair text-2xl font-bold">12 Oct'21</span>
+                            <span class="text-white/40 text-xs">Founded</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="inline-flex items-center gap-2 text-[#d4a054] font-semibold mt-6 hover:underline">
+                        Read Full Bio <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="flex justify-center scroll-fade" style="animation-delay: 0.2s;">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-[#d4a054] to-[#b8863a] flex items-center justify-center text-7xl shadow-2xl shadow-[#d4a054]/20">
+                            🎙️
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-[#1a0a0a] border border-[#d4a054]/30 rounded-2xl px-4 py-3 shadow-xl">
+                            <div class="flex items-center gap-2 text-white">
+                                <i class="fas fa-check-circle text-[#d4a054]"></i>
+                                <span class="text-xs font-medium">Trusted by 50K+ listeners</span>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -left-4 bg-[#d4a054] text-[#1a0a0a] rounded-full px-4 py-2 text-xs font-bold shadow-gold flex items-center gap-1">
+                            <i class="fas fa-heart"></i> Since 2021
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PREMIUM MEMBERSHIP -->
+    <!-- ============================================================ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-fade">
+                <span class="text-[#d4a054] text-sm font-semibold uppercase tracking-wider">Join the Inner Circle</span>
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#1a0a0a] mt-2">
+                    Love Talk Premium <span class="text-[#d4a054]">Membership</span>
+                </h2>
+                <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
+                    Transforming TrueLove Relationships Through Psychology, Community, and Exclusive Learning Experiences. ❤️
+                </p>
+            </div>
+
+            <!-- Pricing cards -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16 scroll-fade">
+                <!-- Youth Plan -->
+                <div class="bg-gradient-to-br from-[#fff5f5] to-white rounded-2xl p-8 border-2 border-[#d4a054]/20 shadow-soft hover:shadow-gold transition-all duration-300 text-center">
+                    <div class="w-16 h-16 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-2xl mx-auto">
+                        🌱
+                    </div>
+                    <h3 class="font-playfair text-2xl font-bold text-[#1a0a0a] mt-4">Youth</h3>
+                    <p class="text-gray-500 text-sm">18 – 26 years</p>
+                    <div class="mt-4">
+                        <span class="text-4xl font-playfair font-bold text-[#d4a054]">₹99</span>
+                        <span class="text-gray-400 text-sm">/ yearly</span>
+                    </div>
+                    <span class="inline-block mt-2 bg-[#d4a054]/10 text-[#d4a054] text-xs font-semibold px-3 py-1 rounded-full">Discounted Price</span>
+                    <ul class="mt-6 space-y-2 text-left text-sm">
+                        <li class="flex items-center gap-2 text-gray-600"><i class="fas fa-check-circle text-[#d4a054]"></i> All 25 Premium Benefits</li>
+                        <li class="flex items-center gap-2 text-gray-600"><i class="fas fa-check-circle text-[#d4a054]"></i> Exclusive Community Access</li>
+                        <li class="flex items-center gap-2 text-gray-600"><i class="fas fa-check-circle text-[#d4a054]"></i> Monthly Live Q&A Webinars</li>
+                    </ul>
+                    <a href="#" class="btn-primary text-white px-8 py-3 rounded-full text-sm font-semibold shadow-gold inline-flex items-center gap-2 mt-6 w-full justify-center">
+                        <i class="fas fa-crown"></i> Join Now
+                    </a>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-gradient-to-br from-[#1a0a0a] to-[#2d0a0a] rounded-2xl p-8 border-2 border-[#d4a054] shadow-soft hover:shadow-gold transition-all duration-300 text-center relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#d4a054]/10 rounded-full blur-2xl"></div>
+                    <span class="absolute top-4 right-4 bg-[#d4a054] text-[#1a0a0a] text-xs font-bold px-3 py-1 rounded-full">Popular</span>
+                    <div class="w-16 h-16 rounded-full bg-[#d4a054]/20 flex items-center justify-center text-2xl mx-auto">
+                        💼
+                    </div>
+                    <h3 class="font-playfair text-2xl font-bold text-white mt-4">Professional</h3>
+                    <p class="text-white/40 text-sm">Working Professionals & 26+</p>
+                    <div class="mt-4">
+                        <span class="text-4xl font-playfair font-bold text-[#d4a054]">₹399</span>
+                        <span class="text-white/40 text-sm">/ yearly</span>
+                    </div>
+                    <ul class="mt-6 space-y-2 text-left text-sm">
+                        <li class="flex items-center gap-2 text-white/70"><i class="fas fa-check-circle text-[#d4a054]"></i> All 25 Premium Benefits</li>
+                        <li class="flex items-center gap-2 text-white/70"><i class="fas fa-check-circle text-[#d4a054]"></i> Exclusive Community + Channel</li>
+                        <li class="flex items-center gap-2 text-white/70"><i class="fas fa-check-circle text-[#d4a054]"></i> Monthly Live Q&A + Group Coaching</li>
+                        <li class="flex items-center gap-2 text-white/70"><i class="fas fa-check-circle text-[#d4a054]"></i> 10% Discount on Consultations</li>
+                    </ul>
+                    <a href="#" class="btn-primary text-white px-8 py-3 rounded-full text-sm font-semibold shadow-gold inline-flex items-center gap-2 mt-6 w-full justify-center">
+                        <i class="fas fa-crown"></i> Join Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- 25 Benefits Grid -->
+            <div class="scroll-fade">
+                <h3 class="font-playfair text-2xl font-bold text-center text-[#1a0a0a] mb-8">
+                    <span class="text-[#d4a054]">25 Exclusive</span> Premium Benefits
+                </h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-users text-[#d4a054] text-lg w-6 text-center"></i>
+                        Exclusive Community & Channel
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-podcast text-[#d4a054] text-lg w-6 text-center"></i>
+                        Exclusive Premium Episodes
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-video text-[#d4a054] text-lg w-6 text-center"></i>
+                        Monthly Live Q&A Webinars
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-percent text-[#d4a054] text-lg w-6 text-center"></i>
+                        10% Off Consultations
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-percent text-[#d4a054] text-lg w-6 text-center"></i>
+                        10% Off Events & Workshops
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-clock text-[#d4a054] text-lg w-6 text-center"></i>
+                        Early Access to Episodes
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-ad text-[#d4a054] text-lg w-6 text-center"></i>
+                        Ad-Free Listening
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-book text-[#d4a054] text-lg w-6 text-center"></i>
+                        Premium E-books & Guides
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-file-alt text-[#d4a054] text-lg w-6 text-center"></i>
+                        Episode Transcripts & Notes
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-hand-holding-heart text-[#d4a054] text-lg w-6 text-center"></i>
+                        Members-Only Resources
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-users-cog text-[#d4a054] text-lg w-6 text-center"></i>
+                        Networking Opportunities
+                    </div>
+                    <div class="benefit-item bg-[#faf6f2] rounded-xl px-4 py-3 text-sm text-gray-700 flex items-center gap-3">
+                        <i class="fas fa-certificate text-[#d4a054] text-lg w-6 text-center"></i>
+                        Exclusive Certificates
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TESTIMONIALS -->
+    <!-- ============================================================ -->
+    <section class="py-20 bg-[#faf6f2]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-fade">
+                <span class="text-[#d4a054] text-sm font-semibold uppercase tracking-wider">What Listeners Say</span>
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#1a0a0a] mt-2">Testimonials</h2>
+                <p class="text-gray-500 mt-3 max-w-lg mx-auto">Real stories from our community about how Love Talk Podcast has touched their lives.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-soft border border-[#d4a054]/5 testimonial-card scroll-fade">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-[#d4a054] text-xl">👩</div>
+                        <div>
+                            <h4 class="font-semibold text-[#1a0a0a]">Priya M.</h4>
+                            <div class="flex text-[#d4a054] text-xs">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        "Love Talk Podcast completely changed how I view relationships. Kotar RJ Pawan's insights are so practical and heartfelt. I look forward to every Friday!"
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-soft border border-[#d4a054]/5 testimonial-card scroll-fade" style="animation-delay: 0.15s;">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-[#d4a054] text-xl">👨</div>
+                        <div>
+                            <h4 class="font-semibold text-[#1a0a0a]">Rahul K.</h4>
+                            <div class="flex text-[#d4a054] text-xs">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        "The premium membership is worth every rupee. The live Q&A sessions and community support have helped me grow immensely in my personal life."
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-soft border border-[#d4a054]/5 testimonial-card scroll-fade" style="animation-delay: 0.3s;">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-[#d4a054] text-xl">👩</div>
+                        <div>
+                            <h4 class="font-semibold text-[#1a0a0a]">Ananya S.</h4>
+                            <div class="flex text-[#d4a054] text-xs">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        "I've been listening since 2021 and it's been a transformative journey. The episode on building trust literally saved my relationship. Thank you, Pawan!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ADVERTISE / REVENUE PAGES -->
+    <!-- ============================================================ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 scroll-fade">
+                <span class="text-[#d4a054] text-sm font-semibold uppercase tracking-wider">Partner With Us</span>
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-[#1a0a0a] mt-2">Advertise & Collaborate</h2>
+                <p class="text-gray-500 mt-3 max-w-lg mx-auto">Grow your brand with India's fastest-growing relationship podcast.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 scroll-fade">
+                <a href="#" class="bg-[#faf6f2] rounded-xl p-5 text-center hover:bg-[#fdf0e0] transition border border-transparent hover:border-[#d4a054]/20 group">
+                    <div class="w-14 h-14 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition">📢</div>
+                    <h4 class="font-semibold text-[#1a0a0a] mt-3">Advertise With Us</h4>
+                    <p class="text-gray-400 text-xs">Reach our engaged audience</p>
+                </a>
+                <a href="#" class="bg-[#faf6f2] rounded-xl p-5 text-center hover:bg-[#fdf0e0] transition border border-transparent hover:border-[#d4a054]/20 group">
+                    <div class="w-14 h-14 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition">🎯</div>
+                    <h4 class="font-semibold text-[#1a0a0a] mt-3">Sponsor an Episode</h4>
+                    <p class="text-gray-400 text-xs">Get featured in our top episodes</p>
+                </a>
+                <a href="#" class="bg-[#faf6f2] rounded-xl p-5 text-center hover:bg-[#fdf0e0] transition border border-transparent hover:border-[#d4a054]/20 group">
+                    <div class="w-14 h-14 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition">🤝</div>
+                    <h4 class="font-semibold text-[#1a0a0a] mt-3">Brand Collaboration</h4>
+                    <p class="text-gray-400 text-xs">Co-create with us</p>
+                </a>
+                <a href="#" class="bg-[#faf6f2] rounded-xl p-5 text-center hover:bg-[#fdf0e0] transition border border-transparent hover:border-[#d4a054]/20 group">
+                    <div class="w-14 h-14 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition">💬</div>
+                    <h4 class="font-semibold text-[#1a0a0a] mt-3">Private Consultation</h4>
+                    <p class="text-gray-400 text-xs">1-on-1 coaching sessions</p>
+                </a>
+                <a href="#" class="bg-[#faf6f2] rounded-xl p-5 text-center hover:bg-[#fdf0e0] transition border border-transparent hover:border-[#d4a054]/20 group">
+                    <div class="w-14 h-14 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition">🎤</div>
+                    <h4 class="font-semibold text-[#1a0a0a] mt-3">College Talk / Events</h4>
+                    <p class="text-gray-400 text-xs">Book for speaking engagements</p>
+                </a>
+                <a href="#" class="bg-[#faf6f2] rounded-xl p-5 text-center hover:bg-[#fdf0e0] transition border border-transparent hover:border-[#d4a054]/20 group">
+                    <div class="w-14 h-14 rounded-full bg-[#d4a054]/10 flex items-center justify-center text-2xl mx-auto group-hover:scale-110 transition">📈</div>
+                    <h4 class="font-semibold text-[#1a0a0a] mt-3">Investor Relations</h4>
+                    <p class="text-gray-400 text-xs">Grow with us</p>
+                </a>
+            </div>
+
+            <div class="text-center mt-8 scroll-fade">
+                <a href="#" class="btn-primary text-white px-8 py-3 rounded-full text-sm font-semibold shadow-gold inline-flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Contact for Partnerships
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SOCIAL MEDIA + CALL TO ACTION -->
+    <!-- ============================================================ -->
+    <section class="py-16 gradient-premium border-t border-[#d4a054]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="font-playfair text-2xl md:text-3xl font-bold text-white">Join the <span class="text-[#d4a054]">Love Talk</span> Community</h3>
+            <p class="text-white/50 mt-2 text-sm">Follow us on social media for daily relationship tips and behind-the-scenes content.</p>
+
+            <div class="flex flex-wrap justify-center gap-4 mt-6">
+                <a href="#" class="social-icon w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-[#d4a054] hover:bg-white/10 transition text-xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-[#d4a054] hover:bg-white/10 transition text-xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-[#d4a054] hover:bg-white/10 transition text-xl">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-[#d4a054] hover:bg-white/10 transition text-xl">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-[#d4a054] hover:bg-white/10 transition text-xl">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-[#d4a054] hover:bg-white/10 transition text-xl">
+                    <i class="fab fa-spotify"></i>
+                </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-white/5 border border-white/10 rounded-full px-6 py-2.5 text-white/70 text-sm hover:bg-[#d4a054]/10 hover:border-[#d4a054]/30 transition">
+                    <i class="fas fa-file-pdf mr-2 text-[#d4a054]"></i> Get Free PDF
+                </a>
+                <a href="#" class="bg-white/5 border border-white/10 rounded-full px-6 py-2.5 text-white/70 text-sm hover:bg-[#d4a054]/10 hover:border-[#d4a054]/30 transition">
+                    <i class="fas fa-users mr-2 text-[#d4a054]"></i> Join Community
+                </a>
+                <a href="#" class="bg-white/5 border border-white/10 rounded-full px-6 py-2.5 text-white/70 text-sm hover:bg-[#d4a054]/10 hover:border-[#d4a054]/30 transition">
+                    <i class="fas fa-envelope mr-2 text-[#d4a054]"></i> Contact
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="bg-[#0f0505] border-t border-[#d4a054]/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a054] to-[#b8863a] flex items-center justify-center text-white font-bold text-lg shadow-gold">
+                            ❤️
+                        </div>
+                        <div>
+                            <span class="font-playfair text-lg font-bold text-white">LoveTalk</span>
+                            <span class="text-[#d4a054] text-sm">Podcast</span>
+                        </div>
+                    </div>
+                    <p class="text-white/40 text-xs mt-3 leading-relaxed">
+                        Dil ki baate Dil se — Transforming relationships through psychology, community, and exclusive learning experiences.
+                    </p>
+                    <div class="flex gap-3 mt-4">
+                        <a href="#" class="text-white/30 hover:text-[#d4a054] transition text-sm"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white/30 hover:text-[#d4a054] transition text-sm"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white/30 hover:text-[#d4a054] transition text-sm"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white/30 hover:text-[#d4a054] transition text-sm"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white text-sm font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Home</a></li>
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Episodes</a></li>
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">About Host</a></li>
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Blog</a></li>
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community -->
+                <div>
+                    <h4 class="text-white text-sm font-semibold mb-4">Community</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Join Community</a></li>
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Be Our Guest</a></li>
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Get Free PDF</a></li>
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Premium Membership</a></li>
+                        <li><a href="#" class="text-white/40 hover:text-[#d4a054] transition">Career</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white text-sm font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li class="text-white/40"><i class="fas fa-envelope text-[#d4a054] mr-2"></i> contact@lovetalkpodcast.in</li>
+                        <li class="text-white/40"><i class="fas fa-calendar-alt text-[#d4a054] mr-2"></i> Every Friday 7:00 AM</li>
+                        <li class="text-white/40"><i class="fas fa-headphones text-[#d4a054] mr-2"></i> 40+ Audio Platforms</li>
+                        <li class="text-white/40"><i class="fas fa-heart text-[#d4a054] mr-2"></i> Since 12 Oct 2021</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/5 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-white/30 text-xs">
+                    © 2026 <span class="text-[#d4a054]">Love Talk Podcast</span> by Kotar RJ Pawan. All rights reserved.
+                </p>
+                <div class="flex gap-4 text-xs">
+                    <a href="#" class="text-white/30 hover:text-[#d4a054] transition">Privacy Policy</a>
+                    <a href="#" class="text-white/30 hover:text-[#d4a054] transition">Terms of Service</a>
+                    <a href="#" class="text-white/30 hover:text-[#d4a054] transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- MOBILE MENU TOGGLE SCRIPT -->
+    <!-- ============================================================ -->
+    <script>
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('max-h-screen');
+            if (isOpen) {
+                mobileMenu.classList.remove('max-h-screen');
+                mobileMenu.classList.add('max-h-0');
+                menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            } else {
+                mobileMenu.classList.remove('max-h-0');
+                mobileMenu.classList.add('max-h-screen');
+                menuBtn.innerHTML = '<i class="fas fa-times"></i>';
+            }
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('max-h-screen');
+                mobileMenu.classList.add('max-h-0');
+                menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Simple scroll animation observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-fade').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
